@@ -4,14 +4,8 @@ import List from "./list";
 import "./app.css";
 
 class App extends Component {
-  static defaultProps = {
-    Store: {
-      lists: [],
-      allCards: {},
-    },
-  };
   render() {
-    const { Store } = this.props;
+    console.log(Store);
     return (
       <main className="App">
         <header className="App-header">
