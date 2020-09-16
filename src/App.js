@@ -5,24 +5,24 @@ import "./app.css";
 
 class App extends Component {
   static defaultProps = {
-    store: {
+    Store: {
       lists: [],
       allCards: {},
     },
   };
   render() {
-    const { store } = this.props;
+    const { Store } = this.props;
     return (
       <main className="App">
         <header className="App-header">
           <h1>Trelloyes</h1>
         </header>
         <div className="App-list">
-          {store.lists.map((list) => (
+          {Store.lists.map((list) => (
             <List
               key={list.id}
               header={list.header}
-              cards={list.cardIDs.map((id) => store.allCards[id])}
+              cards={list.cardIds.map((id) => Store.allCards[id])}
             ></List>
           ))}
         </div>
